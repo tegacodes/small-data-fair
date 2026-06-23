@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
   </head>
   <body>
     <h3>WELCOME TO THE HOME OF SMALL BATCH: A DATASET FARMERS MARKET</h3>
@@ -29,8 +29,8 @@
 
     <div class="grid">
       {% for project in site.projects %}
-      <a href="{{ project.url }}" class="item">
-        <img src="{{ project.image }}" />
+      <a href="{{ project.url | relative_url }}" class="item">
+        <img src="{{ project.image | relative_url }}" />
         <p class="grid">{{ project.title }}</p>
       </a>
       {% endfor %}

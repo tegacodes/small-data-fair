@@ -1,4 +1,7 @@
-title: My Portfolio
+title: Small Data Fair
+baseurl: "/small-data-fair"
+url: "https://tegacodes.github.io"
+
 collections:
   projects:
     output: true
