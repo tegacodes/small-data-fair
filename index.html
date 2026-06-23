@@ -1,0 +1,39 @@
+---
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>WELCOME TO THE HOME OF SMALL BATCH: A DATASET FARMERS MARKET</h3>
+    <p>
+      We proudly source fresh, small batch datasets offering these for sale at
+      our market events!
+    </p>
+
+    <p>
+      <b>Our offerings:</b>
+      Artisanal & heirloom archives • Hand-picked text & image training sets •
+      Ethically & unethically(jk?) sourced collections • Locally scraped files
+    </p>
+    <p>
+      <b>Formats:</b>
+      Image files • Text files • Zipped files LoRAs • SD cards • Thumb drives •
+      Prints Air-drops • One-of-one transfers
+    </p>
+    <h3>OUR PAST INVENTORY</h3>
+
+    <div class="grid">
+      {% for project in site.projects %}
+      <a href="{{ project.url }}" class="item">
+        <img src="{{ project.image }}" />
+        <p class="grid">{{ project.title }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </body>
+</html>
