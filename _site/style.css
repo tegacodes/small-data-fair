@@ -14,13 +14,32 @@ body {
   gap: 1rem;
 }
 
+.item {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
 .item img {
   width: 100%;
   display: block;
 }
 
 .item p {
+  max-width: none;
+  width: 100%;
   margin: 0.5rem 0 1rem;
+}
+
+.grid p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  max-width: none;
+  width: 100%;
+}
+
+.grid a {
 }
 
 .hero {
@@ -38,11 +57,6 @@ a {
 .back {
   display: inline-block;
   margin-bottom: 1rem;
-}
-
-.grid p {
-  font-size: 0.7rem;
-  font-weight: bold;
 }
 
 img {
@@ -147,12 +161,26 @@ li {
   font-size: clamp(12px, 1vw, 16px);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .page-layout {
     grid-template-columns: 1fr;
   }
 
   .inventory-strip {
     position: static;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
   }
 }
