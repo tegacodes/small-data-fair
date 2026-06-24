@@ -9,7 +9,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
@@ -62,12 +62,24 @@ img {
 
 h1 {
   text-transform: uppercase;
+  font-size: clamp(10px, 1vw, 30px);
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
   /* font-size: clamp(16px, 60vw, 24px); */
   font-size: clamp(20px, 3vw, 48px);
 }
 
 h3 {
   padding-top: 1rem;
+}
+
+h4 {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: clamp(15px, 1.5vw, 35px);
 }
 
 p {
@@ -80,15 +92,31 @@ li {
 
 .page-layout {
   display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 700px) 260px;
+  gap: 2rem;
   align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .inventory-strip {
+  /* background-color: #2601cb; */
+  margin-top: 5rem;
+  border: 1px solid #2601cb;
+  padding: 1rem;
   position: sticky;
-  top: 2rem;
 }
+
+/* .inventory-strip h3 {
+  color: white;
+
+  padding-top: 1rem;
+}
+
+.inventory-strip p {
+  color: white;
+  padding-top: 1rem;
+} */
 
 .project-strip {
   display: flex;
@@ -98,8 +126,7 @@ li {
 
 .strip-item {
   display: block;
-  text-decoration: none;
-  color: inherit;
+  width: 100%;
 }
 
 .strip-item img {
@@ -109,7 +136,9 @@ li {
 }
 
 .strip-item p {
-  margin: 0.5rem 0 0;
+  width: 100%;
+  max-width: none;
+  display: block;
   font-size: clamp(12px, 1vw, 16px);
 }
 
