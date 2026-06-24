@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
   </head>
   <body>
+     <div class="page-layout">
+
+    <main class="main-content">
     <h1>WELCOME TO THE HOME OF</h1>
     <img src="{{ '/images/logo.png' | relative_url }}" />
     <h1>A DATASET FARMERS MARKET</h1>
@@ -79,7 +82,14 @@
         </a>
       </li>
     </ul>
+     <p>
+      We are currently planning future Small Batch Data Fairs. Please email
+      clairehentschker@gmail.com if your organization is interested in hosting
+      this event!
+    </p>
+     </main>
 
+      <aside class="inventory-strip">
     <h3>DATA INVENTORY</h3>
 
     <div class="grid">
@@ -90,11 +100,8 @@
       </a>
       {% endfor %}
     </div>
+    </aside>
 
-    <p>
-      We are currently planning future Small Batch Data Fairs. Please email
-      clairehentschker@gmail.com if your organization is interested in hosting
-      this event!
-    </p>
+   
   </body>
 </html>
