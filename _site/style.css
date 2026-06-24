@@ -28,8 +28,10 @@ body {
   margin-bottom: 1rem;
 }
 
-.content {
-  /* max-width: 50%; */
+a {
+  color: white;
+  background-color: #2601cb;
+  text-decoration: none;
 }
 
 .back {
@@ -62,7 +64,7 @@ img {
 
 h1 {
   text-transform: uppercase;
-  font-size: clamp(10px, 1vw, 30px);
+  font-size: clamp(15px, 1.5vw, 35px);
   text-align: center;
 }
 
