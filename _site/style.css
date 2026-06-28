@@ -1,9 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 2rem;
-}
 
-body {
   color: #2601cb;
   text-align: center;
 }
@@ -43,12 +41,19 @@ body {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  /* font-size: 2rem; */
 }
 
 .hero {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   margin-bottom: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -62,8 +67,14 @@ a {
   margin-bottom: 1rem;
 }
 
-img {
+.home-centered {
   max-width: 700px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 .centered-block {
@@ -84,6 +95,7 @@ h1 {
   text-transform: uppercase;
   font-size: clamp(15px, 1.5vw, 35px);
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 h2 {
@@ -93,7 +105,7 @@ h2 {
 }
 
 h3 {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
 h4 {
@@ -102,13 +114,12 @@ h4 {
   font-size: clamp(15px, 1.5vw, 35px);
 }
 
-p {
-  max-width: 700px;
-}
-
 li {
   max-width: 700px;
   list-style-type: none;
+}
+ul {
+  padding-left: 0;
 }
 
 .page-layout {
@@ -164,7 +175,11 @@ li {
   font-size: clamp(12px, 1vw, 16px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+  body {
+    font-size: 0.85rem;
+  }
+
   .page-layout {
     grid-template-columns: 1fr;
   }
@@ -176,14 +191,6 @@ li {
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }
 }
